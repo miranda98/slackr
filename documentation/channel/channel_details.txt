@@ -1,0 +1,1 @@
+> stubbed to return a tuple of an empty channel with 'default' user id '123456789' i.e. return ('Stub', ['123456789'], ['123456789'] )

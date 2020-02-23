@@ -1,0 +1,11 @@
+message_remove (token, message_id)
+
+Returns: Nothing
+
+Exceptions:
+	ValueError when:
+		- Message (based on ID) no longer exists
+	AccessError when:
+		- User does not have permission to remove that row
+		
+Given a message_id for a message, this message is removed from the channel

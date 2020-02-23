@@ -1,0 +1,13 @@
+message_unreact(token, message_id, react_id)
+
+Return: Nothing
+
+Exceptions:
+	ValueError when:
+		- message_id is not a valid message
+		- The authorised user is not an admin
+		- Message with ID message_id is already pinned
+	AccessError when:
+		- The authorised user is not a member of the channel that the message is within
+		
+Given a message within a channel the authorised user is part of, remove a "react" to that particular message

@@ -1,0 +1,9 @@
+message_send(token, channel_id, message)
+
+Returns: Nothing
+
+Exceptions:
+	ValueError when:
+		- Message is more than 1000 characters
+
+Send a message from authorised_user to the channel specified by channel_id

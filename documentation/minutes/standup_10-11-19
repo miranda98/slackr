@@ -1,0 +1,38 @@
+A few clarifications were made about standups
+
+Channels:
+- Needs to add extra keys in the dictionary in "data['channels']"
+    - Add keys for standup
+
+Messages:
+- Messages need to be added to list of messages with correct timestamp
+- After standup, all messages need to be sent
+- possibly edit messageSend function to check if a standup is active:
+    - would append all the messages in a new dictionary/list while standup is active
+    - after standup, append the messages to the message list
+
+
+A question about emailing
+- Need to create team email
+- Assumption - password can be changed to a password that has been used before
+- Question about the reset code
+    - Used a hashed [user email+datetime] + truncation to generate 8 digit code
+- Email template (helps with modularisation)
+    - A basic template for all the reset mails
+    
+Iteration 2 recap
+- we need to follow the instructions more explictly
+- Acceptance criteria was main issue
+
+Refactoring code
+- Explanation of methods used to make code refactoring
+- Code smells, DRY, KISS methods
+- Please add to the seprinciples.md
+
+Teamwork.md
+- Not yet done
+
+Try finalise everything by Saturday!!
+
+New functions
+- Add tests to get proper branch coverage

@@ -1,0 +1,4 @@
+'handle_to_u_id' is a dictionary that takes handles and gives U_IDs
+'email_to_u_id' is a dictionary that "" "" emails "" ""
+'tokens' is a list of all current active tokens (validate using this)
+'users' is a dictionary of users indexed by the string conversion of their U_ID

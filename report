@@ -1,0 +1,11 @@
+#!/bin/bash
+
+case "$1" in
+	"tests")
+		pytest-3;;
+	"coverage")
+		python3-coverage run --branch -m pytest > /dev/null
+		python3-coverage report -m --omit=backend/utility/*,backend/*/__init__.py,backend/*/*_test.py backend/*/*.py;;
+	*)
+		echo 'Usage: ./report method';;
+esac
