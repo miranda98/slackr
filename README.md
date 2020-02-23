@@ -1,6 +1,4 @@
-# COMP1531 Major Project
-
-A video describing this project and the background here can be found here.
+# UNSW Software Engineering Fundamentals - Major Project
 
 ## Aims:
 
@@ -11,16 +9,7 @@ A video describing this project and the background here can be found here.
 * Apply appropriate design practices and methodologies in the development of their solution
 * Develop an appreciation for product design and an intuition of how a typical customer will use a product.
 
-## Changelog (cleared 27th October in git hash "353c70c6e")
-
-* 02/11/2019: "u_id" added to user and users structures
-* 02/11/2019: member return objects (seen in channel/details) have "profile_img_url" property added to them
-* 02/11/2019: Restricted image uploads to only be for JPGs. If you want to do all images that's fine, this just makes it easier for everyone else.
-* 02/11/2019: standup/active route added (this is really trivial)
-
 ## Overview
-
-An overview of this background and this project can be found in a short video found [HERE](https://youtu.be/Mzg3UGv3TSw).
 
 To manage the transition from trimesters to hexamesters in 2020, UNSW has established a new focus on building an in-house digital collaboration and communication tool for groups and teams.
 
@@ -53,112 +42,6 @@ Beside the information available in the interface that Sally and Bob provided, y
 9. Ability to search for messages based on a search string
 10. Ability to modify a user's admin privileges: (MEMBER, ADMIN, OWNER)
 11. Ability to begin a "standup", which is a 15 minute period where users can send messages that at the end of the period will automatically be collated and summarised to all users
-
-To get further information about the requirements, Rayden Pty Ltd has provided a pre-recorded video briefing (with verbal and visual descriptions) of what UNSW would like to see in the Slackr product. This can be found [HERE](https://youtu.be/0_jaxpOSoj4). Hint: **This video should be the main source of information from which you derive your user stories**
-
-## Progress check-in
-
-During your lab class, in weeks without demonstrations (see below), you and your team will conduct a short stand-up in the presence of your tutor. Each member of the team will briefly state what they have done in the past week, what they intend to do over the next week, and what issues they faced or are currently facing. This is so your tutor, who is acting as a representative of the client, is kept informed of your progress. They will make note of your presence and may ask you to elaborate on the work you've done.
-
-## Iteration 1: Tests and Stories
-
-**COMPLETED**
-
-## Iteration 2: Servers and Products
-
-**COMPLETED**
-
-## Iteration 3: Improvements from customer feedback
-
-### Task
-
-1. **Adapt to changes in spec**
-
-	A number of changes have been made to the specification (i.e. interface) since iteration 2. Adjust your code to deal with these changes. A short summary of the key changes include:
-	  * added: GET users/all
-	  * profile_img_url added to user return objects
-	  * user/profiles/uploadphoto now had to be completed
-	  * standup/start takes in the standup length (in seconds) as a variable input
-	  * for message/edit, if the new message is an empty string, the message is deleted
-
-2. **Testing**
-
-	Ensure that you have a suite of automated tests that test your backend to ensure it is functioning as you intend. Note, a couple of particular capabilities may be impossible to test with pytest.
-
-3. **Analyse your system**
-
-	Produce an ER diagram that accurately models the data layer of your backend.
-
-	Place these diagrams in a PDF `er.pdf`.
-
-4. **Demonstrate software engineering design understanding**
-
-	Refactor or add to your code from iteration 2 to utilise good software engineering design to make your code more maintainable. Use a range of principles discussed in lectures.
-
-	As you modify your code, maintain a up to a 2 page markdown file that lists the key changes you've made in your code and why they've been made. 
-
-	Write this in `seprinciples.md`.
-
-5. **Reflect on your use of agile practices and how you worked as a team.**
-
-    Your reflection should, at a minimum, include:
-      * How often you met, and why you met that often
-      * What methods you used to ensure that meetings were successful
-      * What steps you took when things did not go to plan during iteration 3
-      * Details on how you had multiple people working on the same code 
-
-    Write this in `teamwork.md`.
-
-6. **Integrate with front end**
- 
-	After you have tested your backend, try and run the frontend to ensure that your backend works with it. This will allow you to use a fully fledged slackr app that you will demo the capabilities of in week 10.
-
-	This also includes displaying the correct errors on the frontend when errors are raised.
-
-	Please note: You will be given 2 weeks with a fully functioning frontend, beginning at 8pm on Sunday 3rd November (end of week 7). In the interim, the frontend is still available and you are more than welcome to use it, however, there may be the occasional bug, and the following may not be complete on the frontend: admin permission change, search, and standup.
-
-### Submission
-
-This iteration is due to be submitted at 8pm Sunday 17th November (**week 9**). You will then be demonstrating this in your week 10 lab. All team members **must** attend this lab session.
-
-To submit, one team member must run this command in the CSE environment:
-
-```sh
-1531 submit iteration3
-```
-
-Only one team member is required to submit for the entire groups submission to be recorded. **Make sure that everything you intend to submit is included in your repo**.
-
-### Marking Criteria
-
-|Section|Weighting|Criteria|
-|---|---|---|
-|Quality of testing methods|15%|<ul><li>Demonstration of how your automated tests test your backend</li><li>Demonstration of use of good test design</li></ul>|
-|Documentation and Modelling|5%|<ul><li>Produce an ER diagram to model your backend data</li><li>ER diagram accurately reflects team's data layer</li></ul>
-|Demonstration of applying software engineering principles|35%|<ul><li>Explain methods used to refactor code to make it more maintable</li><li>Clear justification of the use of particular design methods</li><li>Submission of well-designed, thought out code that implements principles discussed in lectures</li></ul>|
-|Teamwork|25%|<ul><li>Consistent work towards the goal of a working backend.</li><li>Task board is always up to date and reflects ongoing work</li><li>Demonstration of appropriate use of agile practices to work effectively as a team.</li></ul>|
-|Correctness & Frontend Demonstration|20%|<ul><li>Correctly functioning backend</li><li>Demonstrate a functioning frontend with your correctly implemented backend</li></ul>|
-
-### Extending the frontend (Optional)
-
-There is no requirement or marks awarded for modifying or extending the frontend.
-
-However, we encourage the more eager teams to try and modify or extend the front end to improve the experience in some way. 
-
-We will prioritise non-frontend-extension questions and queries over your queries on the forum. Since this is a bonus aspect to the assignment we can't guarantee support.
-
-Checkout frontend/README.md or the video posted by Hayden on Webcms3 (ReactJS) for more information
-
-If you modify the frontend, you will only be allowed to demonstrate the static version in your final release. To rebundle the frontend, simply go to the *frontend* folder and run **./pack**. This will rebuild the frontend and place it in prebundle.
-
-### Demonstration
-
-When you demonstrate this iteration, the breakdown will go approximately like this:
-
-* 5 minutes of presenting your code, tests, and how it integrates with the provided front-end
-* 10 minutes of Q&A from the tutor(s), including questions about how your team worked as a group
-
-## Interface specifications from Sally and Bob
 
 ### Data types
 
@@ -311,59 +194,3 @@ For example, if we imagine a user with token "12345" is trying to read messages 
 |POST|standup/send|(token, channel_id, message)|{}|**ValueError** when any of:<ul><li>Channel ID is not a valid channel</li><li>Message is more than 1000 characters</li><li>An active standup is not currently running in this channel</li></ul>**AccessError** when<ul><li>The authorised user is not a member of the channel that the message is within</li></ul>|Sending a message to get buffered in the standup queue, assuming a standup is currently active|
 |GET|search|(token, query_str)|{ messages: [] }|N/A|Given a query string, return a collection of messages in all of the channels that the user has joined that match the query|
 |POST|admin/userpermission/change|(token, u_id, permission_id)|{}|**ValueError** when any of:<ul><li>u_id does not refer to a valid user<li>permission_id does not refer to a value permission</li></ul>**AccessError** when<ul><li>The authorised user is not an admin or owner</li></ul>|Given a User by their user ID, set their permissions to new permissions described by permission_id|
-
-
-## Due Dates and Weightings
-
-|Iteration|Code and report due                  |Demonstration to tutor(s)      |Assessment weighting of project (%)|
-|---------|-------------------------------------|-------------------------------|-----------------------------------|
-|   1     |8pm Sunday 6th October (**week 3**)  |In YOUR **week 4** laboratory (week 5 for monday tutes)  |30%                                |
-|   2     |8pm Sunday 27th October (**week 6**) |In YOUR **week 7** laboratory  |40%                                |
-|   3     |8pm Sunday 17th November (**week 9**)|In YOUR **week 10** laboratory |30%                                |
-
-## Expectations
-
-While it is up to you as a team to decide how work is distributed between you, for the purpose of assessment there are certain key criteria all members must.
-
-* Code contribution
-* Documentation contribution
-* Usage of git/GitLab
-* Attendance
-* Peer assessment
-* Academic conduct
-
-The details of each of these is below.
-
-While, in general, all team members will receive the same mark (a sum of the marks for each iteration), **if you as an individual fail to meet these criteria your final project mark may be scaled down**, most likely quite significantly.
-
-### Code contribution
-
-All team members must contribute code to the project. Tutors will assess the degree to which you have contributed by looking at your **git history** and analysing lines of code, number of commits, timing of commits, etc. If you contribute significantly less code than your team members, your work will be closely examined to determine what scaling needs to be applied.
-
-### Documentation contribution
-
-All team members must contribute documentation to the project. Tutors will assess the degree to which you have contributed by looking at your **git history** but also **asking questions** (essentially interviewing you) during your demonstration.
-
-Note that, **contributing more documentation is not a substitute for not contributing code**.
-
-### Peer Assessment
-
-You will be required to complete a form in week 10 where you rate each team member's contribution to the project and leave any comments you have about them. Information on how you can access this form will be released closer to Week 10. Your other team members will **not** be able to see how you rated them or what comments you left.
-
-If your team members give you a less than satisfactory rating, your contribution will be scrutinised and you may find your final mark scaled down.
-
-### Attendance
-
-It is generally assumed that all team members will be present at the demonstrations and at weekly check-ins. If you're absent for more than 80% of the weekly check-ins or any of the demonstrations, your mark may be scaled down.
-
-If, due to exceptional circumstances, you are unable to attend your lab for a demonstration, inform your tutor as soon as you can so they can record your absence as planned.
-
-### Plagiarism
-
-The work you and your group submit must be your own work. Submission of work partially or completely derived from any other person or jointly written with any other person is not permitted. The penalties for such an offence may include negative marks, automatic failure of the course and possibly other academic discipline. Assignment submissions will be examined both automatically and manually for such submissions.
-
-Relevant scholarship authorities will be informed if students holding scholarships are involved in an incident of plagiarism or other misconduct.
-
-Do not provide or show your project work to any other person, except for your group and the teaching staff of COMP1531. If you knowingly provide or show your assignment work to another person for any reason, and work derived from it is submitted you may be penalized, even if the work was submitted without your knowledge or consent. This may apply even if your work is submitted by a third party unknown to you.
-
-Note, you will not be penalized if your work has the potential to be taken without your consent or knowledge.
