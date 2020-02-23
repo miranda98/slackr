@@ -1,5 +1,15 @@
 # UNSW Software Engineering Fundamentals - Major Project
 
+## How to run
+
+In your project folder, run:
+
+```sh
+./run
+```
+
+This will start a server for the frontend and a server for the backend.
+
 ## Aims:
 
 * To provide students with hands on experience testing, developing, and maintaining a backend server in python.
